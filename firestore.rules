@@ -1,0 +1,50 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Collection de test (DOIT être avant la règle générale)
+    match /test/{document} {
+      allow read, write: if true;
+    }
+    
+    // Règles pour la collection users (temporairement permissives)
+    match /users/{userId} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update, delete: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // 🔧 RÈGLES CORRIGÉES POUR LES CATÉGORIES
+    match /categories/{categoryId} {
+      allow read: if true; // Lecture publique des catégories
+      allow write: if request.auth != null && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role in ['admin', 'super_admin'];
+    }
+    
+    // 🆕 RÈGLES POUR LES PRODUITS
+    match /products/{productId} {
+      allow read: if true; // Lecture publique des produits (pour le menu)
+      allow write: if request.auth != null && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role in ['admin', 'super_admin'];
+    }
+    
+    // RÈGLES POUR LES ADRESSES DES UTILISATEURS
+    match /users/{userId}/addresses/{addressId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // 🆕 RÈGLES POUR LES COMMANDES
+    match /orders/{orderId} {
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow read, update: if request.auth != null && 
+        (request.auth.uid == resource.data.userId || 
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role in ['admin', 'super_admin']);
+      allow delete: if request.auth != null && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role in ['admin', 'super_admin'];
+    }
+    
+    // Règles par défaut pour les autres collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
