@@ -30,9 +30,9 @@ export function MenuSection({ onAddToCart }) {
     fetchProducts();
   }, [activeCategory]);
 
-  return <section id="menu" className="py-16 bg-[#e2b7d3]">
+  return <section id="menu" className="py-16 bg-[#e1edf7]">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-12 text-[#0B3B47]">
+      <h2 className="text-3xl font-bold text-center mb-12 text-[#00559b]">
         Notre Menu
       </h2>
       <div className="flex overflow-x-auto pb-4 mb-8 scrollbar-hide">
@@ -41,7 +41,7 @@ export function MenuSection({ onAddToCart }) {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-4 py-2 rounded-full whitespace-nowrap ${activeCategory === category.id ? 'bg-[#0B3B47] text-white' : 'bg-white text-[#0B3B47] hover:bg-[#78013B] hover:text-white'}`}
+              className={`px-4 py-2 rounded-full whitespace-nowrap ${activeCategory === category.id ? 'bg-[#00559b] text-white' : 'bg-white text-[#00559b] hover:bg-[#7ff4eb] hover:text-white'}`}
             >
               {category.name}
             </button>

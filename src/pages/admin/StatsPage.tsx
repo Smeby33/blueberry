@@ -9,7 +9,7 @@ export function StatsPage() {
   const [users, setUsers] = useState<any[]>([]);
   const [categories, setCategories] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const COLORS = ['#0B3B47', '#78013B', '#5E9CA9', '#F6A67B', '#8BBAC5'];
+  const COLORS = ['#00559b', '#7ff4eb', '#5E9CA9', '#F6A67B', '#8BBAC5'];
 
   useEffect(() => {
     async function fetchData() {
@@ -156,7 +156,7 @@ export function StatsPage() {
           Statistiques et rapports
         </h1>
         <div className="mt-4 md:mt-0">
-          <select className="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#0B3B47] focus:border-[#0B3B47]" value={timeRange} onChange={e => setTimeRange(e.target.value)}>
+          <select className="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#00559b] focus:border-[#00559b]" value={timeRange} onChange={e => setTimeRange(e.target.value)}>
             <option value="day">Aujourd'hui</option>
             <option value="week">Cette semaine</option>
             <option value="month">Ce mois</option>
@@ -232,12 +232,12 @@ export function StatsPage() {
             }}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="day" />
-                <YAxis yAxisId="left" orientation="left" stroke="#0B3B47" />
-                <YAxis yAxisId="right" orientation="right" stroke="#78013B" />
+                <YAxis yAxisId="left" orientation="left" stroke="#00559b" />
+                <YAxis yAxisId="right" orientation="right" stroke="#7ff4eb" />
                 <Tooltip />
                 <Legend />
-                <Bar yAxisId="left" dataKey="sales" name="Ventes (xaf)" fill="#0B3B47" />
-                <Bar yAxisId="right" dataKey="orders" name="Commandes" fill="#78013B" />
+                <Bar yAxisId="left" dataKey="sales" name="Ventes (xaf)" fill="#00559b" />
+                <Bar yAxisId="right" dataKey="orders" name="Commandes" fill="#7ff4eb" />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -318,7 +318,7 @@ export function StatsPage() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="orders" stroke="#0B3B47" activeDot={{
+                <Line type="monotone" dataKey="orders" stroke="#00559b" activeDot={{
                 r: 8
               }} />
               </LineChart>

@@ -98,10 +98,10 @@ export function UserProfilePage() {
   
   // Afficher un loading pendant la récupération des données
   if (loading) {
-    return <div className="py-12 bg-[#e2b7d3]">
+    return <div className="py-12 bg-[#e1edf7]">
         <div className="container mx-auto px-4">
           <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-md text-center">
-            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#0B3B47] mx-auto mb-4"></div>
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#00559b] mx-auto mb-4"></div>
             <p className="text-gray-600">Chargement de votre profil...</p>
           </div>
         </div>
@@ -109,7 +109,7 @@ export function UserProfilePage() {
   }
 
   if (!currentUser || !userProfile) {
-    return <div className="py-12 bg-[#e2b7d3]">
+    return <div className="py-12 bg-[#e1edf7]">
         <div className="container mx-auto px-4">
           <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-md text-center">
             <UserIcon className="w-16 h-16 mx-auto text-gray-400 mb-4" />
@@ -122,7 +122,7 @@ export function UserProfilePage() {
             <div className="space-y-3">
               <button 
                 onClick={() => setShowAuthModal(true)}
-                className="w-full bg-[#0B3B47] hover:bg-[#2b5a67] text-white px-6 py-3 rounded-md font-medium"
+                className="w-full bg-[#00559b] hover:bg-[#2b5a67] text-white px-6 py-3 rounded-md font-medium"
               >
                 Se connecter
               </button>
@@ -134,10 +134,10 @@ export function UserProfilePage() {
         </div>
       </div>;
   }
-  return <div className="py-12 bg-[#e2b7d3]">
+  return <div className="py-12 bg-[#e1edf7]">
       <div className="container mx-auto px-4">
         <div className="mb-6">
-          <Link to="/" className="inline-flex items-center text-[#0B3B47] hover:text-[#78013B] font-medium">
+          <Link to="/" className="inline-flex items-center text-[#00559b] hover:text-[#7ff4eb] font-medium">
             <ArrowLeftIcon className="w-4 h-4 mr-1" />
             Retour à l'accueil
           </Link>
@@ -159,14 +159,14 @@ export function UserProfilePage() {
                           target.style.display = 'none';
                           const parent = target.parentElement;
                           if (parent) {
-                            parent.className = 'w-20 h-20 rounded-full bg-[#e2b7d3] flex items-center justify-center mb-3';
-                            parent.innerHTML = '<svg class="w-10 h-10 text-[#0B3B47]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V21C3 22.1 3.89 23 5 23H19C20.1 23 21 22.1 21 21V9M19 9H14V4H5V21H19V9Z" /></svg>';
+                            parent.className = 'w-20 h-20 rounded-full bg-[#e1edf7] flex items-center justify-center mb-3';
+                            parent.innerHTML = '<svg class="w-10 h-10 text-[#00559b]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V21C3 22.1 3.89 23 5 23H19C20.1 23 21 22.1 21 21V9M19 9H14V4H5V21H19V9Z" /></svg>';
                           }
                         }}
                       />
                     ) : (
-                      <div className="w-20 h-20 rounded-full bg-[#e2b7d3] flex items-center justify-center">
-                        <UserIcon className="w-10 h-10 text-[#0B3B47]" />
+                      <div className="w-20 h-20 rounded-full bg-[#e1edf7] flex items-center justify-center">
+                        <UserIcon className="w-10 h-10 text-[#00559b]" />
                       </div>
                     )}
                   </div>
@@ -186,15 +186,15 @@ export function UserProfilePage() {
                   )}
                 </div>
                 <div className="space-y-2">
-                  <button onClick={() => setActiveTab('orders')} className={`w-full text-left px-4 py-2 rounded-md flex items-center ${activeTab === 'orders' ? 'bg-[#0B3B47] text-white' : 'hover:bg-gray-100'}`}>
+                  <button onClick={() => setActiveTab('orders')} className={`w-full text-left px-4 py-2 rounded-md flex items-center ${activeTab === 'orders' ? 'bg-[#00559b] text-white' : 'hover:bg-gray-100'}`}>
                     <ClockIcon className="w-4 h-4 mr-3" />
                     Historique des commandes
                   </button>
-                  <button onClick={() => setActiveTab('addresses')} className={`w-full text-left px-4 py-2 rounded-md flex items-center ${activeTab === 'addresses' ? 'bg-[#0B3B47] text-white' : 'hover:bg-gray-100'}`}>
+                  <button onClick={() => setActiveTab('addresses')} className={`w-full text-left px-4 py-2 rounded-md flex items-center ${activeTab === 'addresses' ? 'bg-[#00559b] text-white' : 'hover:bg-gray-100'}`}>
                     <MapPinIcon className="w-4 h-4 mr-3" />
                     Mes adresses
                   </button>
-                  <button onClick={() => setActiveTab('settings')} className={`w-full text-left px-4 py-2 rounded-md flex items-center ${activeTab === 'settings' ? 'bg-[#0B3B47] text-white' : 'hover:bg-gray-100'}`}>
+                  <button onClick={() => setActiveTab('settings')} className={`w-full text-left px-4 py-2 rounded-md flex items-center ${activeTab === 'settings' ? 'bg-[#00559b] text-white' : 'hover:bg-gray-100'}`}>
                     <UserIcon className="w-4 h-4 mr-3" />
                     Paramètres du compte
                   </button>
@@ -229,7 +229,7 @@ export function UserProfilePage() {
                           const mainImage = order.items && order.items.length > 0 ? order.items[0].image : null;
                           const orderDate = order.createdAt ? new Date(order.createdAt.seconds ? order.createdAt.seconds * 1000 : order.createdAt) : null;
                           return (
-                            <div key={order.id} className="border rounded-lg p-4 hover:border-[#0B3B47] transition-colors">
+                            <div key={order.id} className="border rounded-lg p-4 hover:border-[#00559b] transition-colors">
                               <div className="flex justify-between items-start mb-3">
                                 <div className="flex items-center">
                                   {mainImage && (
@@ -238,7 +238,7 @@ export function UserProfilePage() {
                                     </div>
                                   )}
                                   <div>
-                                    <Link to={`/track-order/${order.id}`} className="font-medium text-[#0B3B47] hover:underline">
+                                    <Link to={`/track-order/${order.id}`} className="font-medium text-[#00559b] hover:underline">
                                       Commande 
                                     </Link>
                                     <div className="text-sm text-gray-500">
@@ -267,7 +267,7 @@ export function UserProfilePage() {
                                 <span className="font-medium">
                                   {order.total ? order.total.toFixed(2) : ''} xaf
                                 </span>
-                                <Link to={`/track-order/${order.id}`} className="text-sm text-[#0B3B47] hover:text-[#78013B]">
+                                <Link to={`/track-order/${order.id}`} className="text-sm text-[#00559b] hover:text-[#7ff4eb]">
                                   Voir les détails
                                 </Link>
                               </div>

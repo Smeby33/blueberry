@@ -270,7 +270,7 @@ export const UserAddressAddForm: React.FC<UserAddressAddFormProps> = ({
         <h2 className="text-xl font-bold">Mes adresses</h2>
         <button
           onClick={() => setShowAddForm(true)}
-          className="bg-[#0B3B47] hover:bg-[#2b5a67] text-white px-4 py-2 rounded-md text-sm font-medium flex items-center"
+          className="bg-[#00559b] hover:bg-[#2b5a67] text-white px-4 py-2 rounded-md text-sm font-medium flex items-center"
         >
           <PlusIcon className="w-4 h-4 mr-2" />
           Ajouter une adresse
@@ -286,14 +286,14 @@ export const UserAddressAddForm: React.FC<UserAddressAddFormProps> = ({
           </div>
         ) : (
           addresses.map((address) => (
-            <div key={address.id} className="border rounded-lg p-4 hover:border-[#0B3B47] transition-colors">
+            <div key={address.id} className="border rounded-lg p-4 hover:border-[#00559b] transition-colors">
               <div className="flex justify-between items-start">
                 <div className="flex-1">
                   <div className="font-medium flex items-center mb-2">
-                    <MapPinIcon className="w-4 h-4 mr-2 text-[#0B3B47]" />
+                    <MapPinIcon className="w-4 h-4 mr-2 text-[#00559b]" />
                     {address.name}
                     {address.isDefault && (
-                      <span className="ml-2 bg-[#0B3B47]/10 text-[#0B3B47] text-xs px-2 py-0.5 rounded-full">
+                      <span className="ml-2 bg-[#00559b]/10 text-[#00559b] text-xs px-2 py-0.5 rounded-full">
                         Par défaut
                       </span>
                     )}
@@ -313,7 +313,7 @@ export const UserAddressAddForm: React.FC<UserAddressAddFormProps> = ({
                     <button
                       onClick={() => handleSetDefault(address.id)}
                       disabled={loading}
-                      className="text-sm text-[#0B3B47] hover:text-[#78013B] disabled:opacity-50"
+                      className="text-sm text-[#00559b] hover:text-[#7ff4eb] disabled:opacity-50"
                     >
                       Définir par défaut
                     </button>
@@ -321,7 +321,7 @@ export const UserAddressAddForm: React.FC<UserAddressAddFormProps> = ({
                   <button
                     onClick={() => handleEdit(address)}
                     disabled={loading}
-                    className="text-sm text-[#0B3B47] hover:text-[#78013B] disabled:opacity-50 flex items-center"
+                    className="text-sm text-[#00559b] hover:text-[#7ff4eb] disabled:opacity-50 flex items-center"
                   >
                     <EditIcon className="w-3 h-3 mr-1" />
                   </button>
@@ -380,7 +380,7 @@ export const UserAddressAddForm: React.FC<UserAddressAddFormProps> = ({
                   onBlur={() => setTimeout(() => setShowSuggestions(false), 150)}
                   placeholder="Domicile, Bureau, etc."
                   required
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
                 />
                 {showSuggestions && (
                   <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg">
@@ -412,7 +412,7 @@ export const UserAddressAddForm: React.FC<UserAddressAddFormProps> = ({
                   value={formData.postalCode}
                   onChange={handleInputChange}
                   placeholder="75001"
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
                 />
               </div>
 
@@ -428,7 +428,7 @@ export const UserAddressAddForm: React.FC<UserAddressAddFormProps> = ({
                   onChange={handleInputChange}
                   placeholder="123 Rue de la République"
                   required
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
                 />
               </div>
 
@@ -444,7 +444,7 @@ export const UserAddressAddForm: React.FC<UserAddressAddFormProps> = ({
                   onChange={handleInputChange}
                   placeholder="Paris"
                   required
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
                 />
               </div>
 
@@ -484,7 +484,7 @@ export const UserAddressAddForm: React.FC<UserAddressAddFormProps> = ({
                         ...prev,
                         latitude: e.target.value ? parseFloat(e.target.value) : undefined
                       }))}
-                      className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                      className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
                     />
                   </div>
                   <div>
@@ -497,7 +497,7 @@ export const UserAddressAddForm: React.FC<UserAddressAddFormProps> = ({
                         ...prev,
                         longitude: e.target.value ? parseFloat(e.target.value) : undefined
                       }))}
-                      className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                      className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
                     />
                   </div>
                 </div> */}
@@ -515,7 +515,7 @@ export const UserAddressAddForm: React.FC<UserAddressAddFormProps> = ({
                   name="isDefault"
                   checked={formData.isDefault}
                   onChange={handleInputChange}
-                  className="h-4 w-4 text-[#0B3B47] focus:ring-[#0B3B47] border-gray-300 rounded"
+                  className="h-4 w-4 text-[#00559b] focus:ring-[#00559b] border-gray-300 rounded"
                 />
                 <label htmlFor="isDefault" className="ml-2 block text-sm text-gray-700">
                   Définir comme adresse par défaut
@@ -527,7 +527,7 @@ export const UserAddressAddForm: React.FC<UserAddressAddFormProps> = ({
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-[#0B3B47] hover:bg-[#2b5a67] disabled:bg-gray-400 text-white px-4 py-2 rounded-md font-medium transition-colors flex items-center"
+                className="bg-[#00559b] hover:bg-[#2b5a67] disabled:bg-gray-400 text-white px-4 py-2 rounded-md font-medium transition-colors flex items-center"
               >
                 {loading ? (
                   <>

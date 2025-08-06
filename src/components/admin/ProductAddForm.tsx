@@ -257,7 +257,7 @@ export function ProductAddForm({ isOpen, onClose, onSuccess, currentProduct }: P
                       id="name" 
                       required
                       defaultValue={currentProduct?.name || ''} 
-                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm" 
+                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm" 
                       placeholder="Ex: Entrecôte grillée, Salade César..."
                     />
                   </div>
@@ -277,7 +277,7 @@ export function ProductAddForm({ isOpen, onClose, onSuccess, currentProduct }: P
                         name="category"
                         required
                         defaultValue={currentProduct?.category || ''}
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
                       >
                         <option value="">-- Sélectionner une catégorie --</option>
                         {categories.map((category) => (
@@ -302,7 +302,7 @@ export function ProductAddForm({ isOpen, onClose, onSuccess, currentProduct }: P
                       min="0"
                       required
                       defaultValue={currentProduct?.price || ''} 
-                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm" 
+                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm" 
                       placeholder="0.00"
                     />
                   </div>
@@ -317,7 +317,7 @@ export function ProductAddForm({ isOpen, onClose, onSuccess, currentProduct }: P
                       name="description" 
                       rows={3} 
                       defaultValue={currentProduct?.description || ''} 
-                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm" 
+                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm" 
                       placeholder="Description détaillée du produit..."
                     />
                   </div>
@@ -338,7 +338,7 @@ export function ProductAddForm({ isOpen, onClose, onSuccess, currentProduct }: P
                           value="file"
                           checked={imageInputType === 'file'}
                           onChange={() => setImageInputType('file')}
-                          className="h-4 w-4 text-[#0B3B47] focus:ring-[#0B3B47] border-gray-300"
+                          className="h-4 w-4 text-[#00559b] focus:ring-[#00559b] border-gray-300"
                         />
                         <span className="ml-2 text-sm text-gray-700">Uploader un fichier</span>
                       </label>
@@ -349,7 +349,7 @@ export function ProductAddForm({ isOpen, onClose, onSuccess, currentProduct }: P
                           value="url"
                           checked={imageInputType === 'url'}
                           onChange={() => setImageInputType('url')}
-                          className="h-4 w-4 text-[#0B3B47] focus:ring-[#0B3B47] border-gray-300"
+                          className="h-4 w-4 text-[#00559b] focus:ring-[#00559b] border-gray-300"
                         />
                         <span className="ml-2 text-sm text-gray-700">URL en ligne</span>
                       </label>
@@ -368,7 +368,7 @@ export function ProductAddForm({ isOpen, onClose, onSuccess, currentProduct }: P
                           id="imageFile"
                           accept="image/*"
                           onChange={handleFileSelect}
-                          className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-[#0B3B47] file:text-white hover:file:bg-[#2b5a67]"
+                          className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-[#00559b] file:text-white hover:file:bg-[#2b5a67]"
                         />
                         {selectedFile && (
                           <button
@@ -411,7 +411,7 @@ export function ProductAddForm({ isOpen, onClose, onSuccess, currentProduct }: P
                         id="imageUrl"
                         defaultValue={currentProduct?.image || ''}
                         onChange={handleImageChange}
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
                         placeholder="https://example.com/image.jpg"
                       />
                       <p className="mt-1 text-xs text-gray-500">
@@ -460,7 +460,7 @@ export function ProductAddForm({ isOpen, onClose, onSuccess, currentProduct }: P
                         name="available" 
                         type="checkbox" 
                         defaultChecked={currentProduct?.available ?? true} 
-                        className="h-4 w-4 text-[#0B3B47] focus:ring-[#0B3B47] border-gray-300 rounded" 
+                        className="h-4 w-4 text-[#00559b] focus:ring-[#00559b] border-gray-300 rounded" 
                       />
                       <label htmlFor="available" className="ml-2 block text-sm text-gray-900">
                         Produit disponible
@@ -476,7 +476,7 @@ export function ProductAddForm({ isOpen, onClose, onSuccess, currentProduct }: P
                         name="isSpecial" 
                         type="checkbox" 
                         defaultChecked={currentProduct?.isSpecial ?? false} 
-                        className="h-4 w-4 text-[#0B3B47] focus:ring-[#0B3B47] border-gray-300 rounded" 
+                        className="h-4 w-4 text-[#00559b] focus:ring-[#00559b] border-gray-300 rounded" 
                       />
                       <label htmlFor="isSpecial" className="ml-2 block text-sm text-gray-900">
                         Produit spécial / Recommandé
@@ -495,7 +495,7 @@ export function ProductAddForm({ isOpen, onClose, onSuccess, currentProduct }: P
               <button 
                 type="submit"
                 disabled={isSubmitting || loadingCategories}
-                className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-[#0B3B47] text-base font-medium text-white hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B3B47] sm:ml-3 sm:w-auto sm:text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-[#00559b] text-base font-medium text-white hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00559b] sm:ml-3 sm:w-auto sm:text-sm disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <div className="flex items-center">

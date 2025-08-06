@@ -56,7 +56,7 @@ export function FeaturedItems({
                                     className="w-full h-full object-cover"
                                 />
                                 {item.isSpecial && (
-                                    <div className="absolute top-3 right-3 bg-[#78013B] text-white px-2 py-1 rounded-full text-xs font-bold">
+                                    <div className="absolute top-3 right-3 bg-[#7ff4eb] text-white px-2 py-1 rounded-full text-xs font-bold">
                                         Spécialité
                                     </div>
                                 )}
@@ -66,7 +66,7 @@ export function FeaturedItems({
                                     <h3 className="text-lg font-semibold text-gray-800">
                                         {item.name}
                                     </h3>
-                                    <span className="font-bold text-[#0B3B47]">
+                                    <span className="font-bold text-[#00559b]">
                                         {item.price.toFixed(2)} xaf
                                     </span>
                                 </div>
@@ -98,7 +98,7 @@ export function FeaturedItems({
                                 <div className="mt-4 flex justify-between items-center">
                                     <span className="text-green-600 text-sm">Disponible</span>
                                     <button
-                                        className="flex items-center text-sm font-medium bg-[#0B3B47] hover:bg-[#2b5a67] text-white px-3 py-2 rounded-md transition-colors"
+                                        className="flex items-center text-sm font-medium bg-[#00559b] hover:bg-[#2b5a67] text-white px-3 py-2 rounded-md transition-colors"
                                         onClick={() => onAddToPlateau(item)}
                                     >
                                         <PlusCircleIcon className="w-4 h-4 mr-1" />

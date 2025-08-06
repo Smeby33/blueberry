@@ -192,7 +192,7 @@ export function CategoryAddForm({ isOpen, onClose, onSuccess, currentCategory }:
                           id="predefined-select"
                           value={selectedPredefined}
                           onChange={(e) => handlePredefinedChange(e.target.value)}
-                          className="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                          className="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
                         >
                           <option value="">-- Sélectionner une catégorie standard --</option>
                           {predefinedCategories.map((cat) => (
@@ -211,7 +211,7 @@ export function CategoryAddForm({ isOpen, onClose, onSuccess, currentCategory }:
                           name="category-type"
                           checked={useCustomCategory}
                           onChange={handleCustomToggle}
-                          className="h-4 w-4 text-[#0B3B47] focus:ring-[#0B3B47] border-gray-300"
+                          className="h-4 w-4 text-[#00559b] focus:ring-[#00559b] border-gray-300"
                         />
                         <label htmlFor="custom-category" className="ml-2 block text-sm text-gray-700">
                           Créer une catégorie personnalisée
@@ -231,7 +231,7 @@ export function CategoryAddForm({ isOpen, onClose, onSuccess, currentCategory }:
                       currentCategory?.visible ?? 
                       (selectedPredefined ? predefinedCategories.find(cat => cat.id === selectedPredefined)?.visible : true)
                     } 
-                    className="h-4 w-4 text-[#0B3B47] focus:ring-[#0B3B47] border-gray-300 rounded" 
+                    className="h-4 w-4 text-[#00559b] focus:ring-[#00559b] border-gray-300 rounded" 
                   />
                   <label htmlFor="visible" className="ml-2 block text-sm text-gray-900">
                     Visible dans le menu public
@@ -255,7 +255,7 @@ export function CategoryAddForm({ isOpen, onClose, onSuccess, currentCategory }:
                         id="name" 
                         required
                         defaultValue={currentCategory?.name || ''} 
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm" 
+                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm" 
                         placeholder="Ex: Entrées, Plats, Desserts..."
                       />
                     </div>
@@ -272,7 +272,7 @@ export function CategoryAddForm({ isOpen, onClose, onSuccess, currentCategory }:
                         required
                         defaultValue={currentCategory?.id || ''} 
                         disabled={!!currentCategory} // Désactiver lors de la modification
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm disabled:bg-gray-100 disabled:cursor-not-allowed" 
+                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm disabled:bg-gray-100 disabled:cursor-not-allowed" 
                         placeholder="Ex: entrees, plats, desserts (sans espaces)"
                       />
                       <p className="mt-1 text-xs text-gray-500">
@@ -291,7 +291,7 @@ export function CategoryAddForm({ isOpen, onClose, onSuccess, currentCategory }:
                         name="description" 
                         rows={3} 
                         defaultValue={currentCategory?.description || ''} 
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm" 
+                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm" 
                         placeholder="Description optionnelle de la catégorie..."
                       />
                     </div>
@@ -309,7 +309,7 @@ export function CategoryAddForm({ isOpen, onClose, onSuccess, currentCategory }:
                         max="999"
                         required
                         defaultValue={currentCategory?.order || 1} 
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm" 
+                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm" 
                       />
                       <p className="mt-1 text-xs text-gray-500">
                         Plus le chiffre est petit, plus la catégorie apparaîtra en premier.
@@ -325,7 +325,7 @@ export function CategoryAddForm({ isOpen, onClose, onSuccess, currentCategory }:
               <button 
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-[#0B3B47] text-base font-medium text-white hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B3B47] sm:ml-3 sm:w-auto sm:text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-[#00559b] text-base font-medium text-white hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00559b] sm:ml-3 sm:w-auto sm:text-sm disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <div className="flex items-center">

@@ -175,12 +175,12 @@ export function CheckoutPage({
     }
   };
   if (cartItems.length === 0) {
-    return <div className="py-12 bg-[#e2b7d3]">
+    return <div className="py-12 bg-[#e1edf7]">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-md">
             <div className="text-center">
-              <div className="bg-[#e2b7d3] p-4 rounded-full inline-block mb-4">
-                <TruckIcon className="w-12 h-12 text-[#78013B]" />
+              <div className="bg-[#e1edf7] p-4 rounded-full inline-block mb-4">
+                <TruckIcon className="w-12 h-12 text-[#7ff4eb]" />
               </div>
               <h1 className="text-2xl font-bold text-gray-800 mb-2">
                 Votre panier est vide
@@ -188,7 +188,7 @@ export function CheckoutPage({
               <p className="text-gray-600 mb-6">
                 Vous n'avez pas encore ajouté d'articles à votre panier.
               </p>
-              <Link to="/menu" className="bg-[#0B3B47] hover:bg-[#2b5a67] text-white px-6 py-3 rounded-md font-medium inline-flex items-center">
+              <Link to="/menu" className="bg-[#00559b] hover:bg-[#2b5a67] text-white px-6 py-3 rounded-md font-medium inline-flex items-center">
                 <ArrowLeftIcon className="w-4 h-4 mr-2" />
                 Retour au menu
               </Link>
@@ -197,15 +197,15 @@ export function CheckoutPage({
         </div>
       </div>;
   }
-  return <div className="py-12 bg-[#e2b7d3]">
+  return <div className="py-12 bg-[#e1edf7]">
       <div className="container mx-auto px-4">
         <div className="mb-6">
-          <Link to="/menu" className="inline-flex items-center text-[#0B3B47] hover:text-[#78013B] font-medium">
+          <Link to="/menu" className="inline-flex items-center text-[#00559b] hover:text-[#7ff4eb] font-medium">
             <ArrowLeftIcon className="w-4 h-4 mr-1" />
             Retour au menu
           </Link>
         </div>
-        <h1 className="text-3xl font-bold text-[#0B3B47] mb-8">
+        <h1 className="text-3xl font-bold text-[#00559b] mb-8">
           Finaliser votre commande
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -216,35 +216,35 @@ export function CheckoutPage({
                   Mode de livraison
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  <button type="button" onClick={() => setDeliveryMethod('delivery')} className={`flex items-center p-4 border rounded-lg ${deliveryMethod === 'delivery' ? 'border-[#0B3B47] bg-[#0B3B47]/5' : 'border-gray-200 hover:border-gray-300'}`}>
-                    <div className={`w-5 h-5 rounded-full border mr-3 flex items-center justify-center ${deliveryMethod === 'delivery' ? 'border-[#0B3B47]' : 'border-gray-400'}`}>
-                      {deliveryMethod === 'delivery' && <div className="w-3 h-3 rounded-full bg-[#0B3B47]"></div>}
+                  <button type="button" onClick={() => setDeliveryMethod('delivery')} className={`flex items-center p-4 border rounded-lg ${deliveryMethod === 'delivery' ? 'border-[#00559b] bg-[#00559b]/5' : 'border-gray-200 hover:border-gray-300'}`}>
+                    <div className={`w-5 h-5 rounded-full border mr-3 flex items-center justify-center ${deliveryMethod === 'delivery' ? 'border-[#00559b]' : 'border-gray-400'}`}>
+                      {deliveryMethod === 'delivery' && <div className="w-3 h-3 rounded-full bg-[#00559b]"></div>}
                     </div>
                     <div className="flex-1">
                       <div className="font-medium flex items-center">
-                        <TruckIcon className="w-4 h-4 mr-2 text-[#78013B]" />
+                        <TruckIcon className="w-4 h-4 mr-2 text-[#7ff4eb]" />
                         Livraison à domicile
                       </div>
                       <div className="text-sm text-gray-500 mt-1">
                         Livraison en 25-30 minutes
                       </div>
                     </div>
-                    <div className="text-[#0B3B47] font-medium">2500.00 xaf</div>
+                    <div className="text-[#00559b] font-medium">2500.00 xaf</div>
                   </button>
-                  <button type="button" onClick={() => setDeliveryMethod('pickup')} className={`flex items-center p-4 border rounded-lg ${deliveryMethod === 'pickup' ? 'border-[#0B3B47] bg-[#0B3B47]/5' : 'border-gray-200 hover:border-gray-300'}`}>
-                    <div className={`w-5 h-5 rounded-full border mr-3 flex items-center justify-center ${deliveryMethod === 'pickup' ? 'border-[#0B3B47]' : 'border-gray-400'}`}>
-                      {deliveryMethod === 'pickup' && <div className="w-3 h-3 rounded-full bg-[#0B3B47]"></div>}
+                  <button type="button" onClick={() => setDeliveryMethod('pickup')} className={`flex items-center p-4 border rounded-lg ${deliveryMethod === 'pickup' ? 'border-[#00559b] bg-[#00559b]/5' : 'border-gray-200 hover:border-gray-300'}`}>
+                    <div className={`w-5 h-5 rounded-full border mr-3 flex items-center justify-center ${deliveryMethod === 'pickup' ? 'border-[#00559b]' : 'border-gray-400'}`}>
+                      {deliveryMethod === 'pickup' && <div className="w-3 h-3 rounded-full bg-[#00559b]"></div>}
                     </div>
                     <div className="flex-1">
                       <div className="font-medium flex items-center">
-                        <HomeIcon className="w-4 h-4 mr-2 text-[#78013B]" />
+                        <HomeIcon className="w-4 h-4 mr-2 text-[#7ff4eb]" />
                         Retrait sur place
                       </div>
                       <div className="text-sm text-gray-500 mt-1">
                         Prêt en 15-20 minutes
                       </div>
                     </div>
-                    <div className="text-[#0B3B47] font-medium">Gratuit</div>
+                    <div className="text-[#00559b] font-medium">Gratuit</div>
                   </button>
                 </div>
                 {deliveryMethod === 'delivery' && <div className="mt-4">
@@ -257,7 +257,7 @@ export function CheckoutPage({
                       id="address"
                       value={address}
                       onChange={e => setAddress(e.target.value)}
-                      className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm mb-2"
+                      className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm mb-2"
                       required={deliveryMethod === 'delivery'}
                     >
                       <option value="">Sélectionnez une adresse...</option>
@@ -276,7 +276,7 @@ export function CheckoutPage({
                       value={address}
                       onChange={e => setAddress(e.target.value)}
                       placeholder="Votre adresse complète"
-                      className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                      className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
                       required={deliveryMethod === 'delivery'}
                     />
                   </div>
@@ -287,20 +287,20 @@ export function CheckoutPage({
               <div className="p-6">
                 <h2 className="text-xl font-semibold mb-4">Mode de paiement</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  <button type="button" onClick={() => setPaymentMethod('card')} className={`flex items-center p-4 border rounded-lg ${paymentMethod === 'card' ? 'border-[#0B3B47] bg-[#0B3B47]/5' : 'border-gray-200 hover:border-gray-300'}`}>
-                    <div className={`w-5 h-5 rounded-full border mr-3 flex items-center justify-center ${paymentMethod === 'card' ? 'border-[#0B3B47]' : 'border-gray-400'}`}>
-                      {paymentMethod === 'card' && <div className="w-3 h-3 rounded-full bg-[#0B3B47]"></div>}
+                  <button type="button" onClick={() => setPaymentMethod('card')} className={`flex items-center p-4 border rounded-lg ${paymentMethod === 'card' ? 'border-[#00559b] bg-[#00559b]/5' : 'border-gray-200 hover:border-gray-300'}`}>
+                    <div className={`w-5 h-5 rounded-full border mr-3 flex items-center justify-center ${paymentMethod === 'card' ? 'border-[#00559b]' : 'border-gray-400'}`}>
+                      {paymentMethod === 'card' && <div className="w-3 h-3 rounded-full bg-[#00559b]"></div>}
                     </div>
                     <div className="flex-1">
                       <div className="font-medium flex items-center">
-                        <CreditCardIcon className="w-4 h-4 mr-2 text-[#78013B]" />
+                        <CreditCardIcon className="w-4 h-4 mr-2 text-[#7ff4eb]" />
                         Carte bancaire
                       </div>
                     </div>
                   </button>
-                  <button type="button" onClick={() => setPaymentMethod('cash')} className={`flex items-center p-4 border rounded-lg ${paymentMethod === 'cash' ? 'border-[#0B3B47] bg-[#0B3B47]/5' : 'border-gray-200 hover:border-gray-300'}`}>
-                    <div className={`w-5 h-5 rounded-full border mr-3 flex items-center justify-center ${paymentMethod === 'cash' ? 'border-[#0B3B47]' : 'border-gray-400'}`}>
-                      {paymentMethod === 'cash' && <div className="w-3 h-3 rounded-full bg-[#0B3B47]"></div>}
+                  <button type="button" onClick={() => setPaymentMethod('cash')} className={`flex items-center p-4 border rounded-lg ${paymentMethod === 'cash' ? 'border-[#00559b] bg-[#00559b]/5' : 'border-gray-200 hover:border-gray-300'}`}>
+                    <div className={`w-5 h-5 rounded-full border mr-3 flex items-center justify-center ${paymentMethod === 'cash' ? 'border-[#00559b]' : 'border-gray-400'}`}>
+                      {paymentMethod === 'cash' && <div className="w-3 h-3 rounded-full bg-[#00559b]"></div>}
                     </div>
                     <div className="flex-1">
                       <div className="font-medium">Espèces</div>
@@ -315,20 +315,20 @@ export function CheckoutPage({
                       <label htmlFor="cardNumber" className="block text-sm font-medium text-gray-700 mb-1">
                         Numéro de carte
                       </label>
-                      <input type="text" id="cardNumber" value={cardNumber} onChange={e => setCardNumber(e.target.value)} placeholder="1234 5678 9012 3456" className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm" required={paymentMethod === 'card'} />
+                      <input type="text" id="cardNumber" value={cardNumber} onChange={e => setCardNumber(e.target.value)} placeholder="1234 5678 9012 3456" className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm" required={paymentMethod === 'card'} />
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="cardExpiry" className="block text-sm font-medium text-gray-700 mb-1">
                           Date d'expiration
                         </label>
-                        <input type="text" id="cardExpiry" value={cardExpiry} onChange={e => setCardExpiry(e.target.value)} placeholder="MM/AA" className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm" required={paymentMethod === 'card'} />
+                        <input type="text" id="cardExpiry" value={cardExpiry} onChange={e => setCardExpiry(e.target.value)} placeholder="MM/AA" className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm" required={paymentMethod === 'card'} />
                       </div>
                       <div>
                         <label htmlFor="cardCVC" className="block text-sm font-medium text-gray-700 mb-1">
                           CVC
                         </label>
-                        <input type="text" id="cardCVC" value={cardCVC} onChange={e => setCardCVC(e.target.value)} placeholder="123" className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm" required={paymentMethod === 'card'} />
+                        <input type="text" id="cardCVC" value={cardCVC} onChange={e => setCardCVC(e.target.value)} placeholder="123" className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm" required={paymentMethod === 'card'} />
                       </div>
                     </div>
                   </div>}
@@ -368,10 +368,10 @@ export function CheckoutPage({
                   </div>
                   <div className="flex justify-between font-bold text-lg border-t pt-2 mt-2">
                     <span>Total</span>
-                    <span className="text-[#0B3B47]">{total.toFixed(2)} xaf</span>
+                    <span className="text-[#00559b]">{total.toFixed(2)} xaf</span>
                   </div>
                 </div>
-                <button type="button" onClick={handleSubmit} disabled={loading} className="w-full mt-6 bg-[#78013B] hover:bg-[#BF7076] text-white font-medium py-3 px-4 rounded-md flex items-center justify-center transition-colors">
+                <button type="button" onClick={handleSubmit} disabled={loading} className="w-full mt-6 bg-[#7ff4eb] hover:bg-[#BF7076] text-white font-medium py-3 px-4 rounded-md flex items-center justify-center transition-colors">
                   {loading ? <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>

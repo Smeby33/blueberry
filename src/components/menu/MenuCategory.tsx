@@ -100,15 +100,15 @@ export function MenuCategory({
         const desc = item.description || "";
         const isLong = desc.length > 150;
         const shortDesc = isLong ? desc.slice(0, 150) + "..." : desc;
-        return <div key={item.id} className={`bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg border border-gray-100 ${!isAvailable ? 'opacity-75' : ''} ${item.isSpecial ? 'ring-2 ring-[#78013B]' : ''}`}>
+        return <div key={item.id} className={`bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg border border-gray-100 ${!isAvailable ? 'opacity-75' : ''} ${item.isSpecial ? 'ring-2 ring-[#7ff4eb]' : ''}`}>
           <div className="relative h-56">
             <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
-            {item.isSpecial && <div className="absolute top-3 right-3 bg-[#78013B] text-white px-2 py-1 rounded-full text-xs font-bold">Spécialité</div>}
+            {item.isSpecial && <div className="absolute top-3 right-3 bg-[#7ff4eb] text-white px-2 py-1 rounded-full text-xs font-bold">Spécialité</div>}
           </div>
           <div className="p-5">
             <div className="flex justify-between items-start mb-2">
               <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
-              <span className="font-bold text-[#0B3B47]">{item.price.toFixed(2)} xaf</span>
+              <span className="font-bold text-[#00559b]">{item.price.toFixed(2)} xaf</span>
             </div>
             <p className="text-gray-600 text-sm mb-4">
               {shortDesc}
@@ -126,7 +126,7 @@ export function MenuCategory({
             </p>
             <div className="flex justify-between items-center">
               <div className={`flex items-center text-sm ${statusInfo.className}`}>{statusInfo.icon}<span>{statusInfo.label}</span></div>
-              <button className={`flex items-center text-sm font-medium rounded-md px-3 py-1.5 transition-colors ${isAvailable ? 'bg-[#0B3B47] hover:bg-[#2b5a67] text-white' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`} onClick={() => {
+              <button className={`flex items-center text-sm font-medium rounded-md px-3 py-1.5 transition-colors ${isAvailable ? 'bg-[#00559b] hover:bg-[#2b5a67] text-white' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`} onClick={() => {
                 if (isAvailable) {
                   console.log('🔘 [MenuCategory] Clic sur bouton, item envoyé:', {
                     ...item,

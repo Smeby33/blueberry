@@ -76,7 +76,7 @@ export function UsersPage() {
         <h1 className="text-2xl font-bold text-gray-900">
           Gestion des utilisateurs
         </h1>
-        <button onClick={handleAddUser} className="mt-4 md:mt-0 inline-flex items-center px-4 py-2 bg-[#0B3B47] text-white font-medium rounded-md hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B3B47]">
+        <button onClick={handleAddUser} className="mt-4 md:mt-0 inline-flex items-center px-4 py-2 bg-[#00559b] text-white font-medium rounded-md hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00559b]">
           <PlusIcon className="w-5 h-5 mr-2" />
           Ajouter un utilisateur
         </button>
@@ -87,10 +87,10 @@ export function UsersPage() {
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <SearchIcon className="h-5 w-5 text-gray-400" />
           </div>
-          <input type="text" placeholder="Rechercher un utilisateur..." className="block w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#0B3B47] focus:border-[#0B3B47]" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+          <input type="text" placeholder="Rechercher un utilisateur..." className="block w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#00559b] focus:border-[#00559b]" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
         </div>
         <div>
-          <select className="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#0B3B47] focus:border-[#0B3B47]" value={roleFilter} onChange={e => setRoleFilter(e.target.value)}>
+          <select className="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#00559b] focus:border-[#00559b]" value={roleFilter} onChange={e => setRoleFilter(e.target.value)}>
             <option value="all">Tous les rôles</option>
             <option value="admin">Administrateurs</option>
             <option value="client">Clients</option>
@@ -174,7 +174,7 @@ export function UsersPage() {
                         {formatDate(user.createdAt)}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <button onClick={() => handleEditUser(user)} className="text-[#0B3B47] hover:text-[#2b5a67] mr-3">
+                        <button onClick={() => handleEditUser(user)} className="text-[#00559b] hover:text-[#2b5a67] mr-3">
                           <EditIcon className="h-5 w-5" />
                         </button>
                         <button className="text-red-600 hover:text-red-800">
@@ -209,13 +209,13 @@ export function UsersPage() {
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                       Nom complet
                     </label>
-                    <input type="text" name="name" id="name" defaultValue={currentUser?.name || ''} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                    <input type="text" name="name" id="name" defaultValue={currentUser?.name || ''} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                       Email
                     </label>
-                    <input type="email" name="email" id="email" defaultValue={currentUser?.email || ''} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                    <input type="email" name="email" id="email" defaultValue={currentUser?.email || ''} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -223,13 +223,13 @@ export function UsersPage() {
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                       Téléphone
                     </label>
-                    <input type="tel" name="phone" id="phone" defaultValue={currentUser?.phone || ''} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                    <input type="tel" name="phone" id="phone" defaultValue={currentUser?.phone || ''} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                   </div>
                   <div>
                     <label htmlFor="role" className="block text-sm font-medium text-gray-700">
                       Rôle
                     </label>
-                    <select id="role" name="role" defaultValue={currentUser?.role || 'client'} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]">
+                    <select id="role" name="role" defaultValue={currentUser?.role || 'client'} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]">
                       <option value="client">Client</option>
                       <option value="admin">Administrateur</option>
                     </select>
@@ -239,24 +239,24 @@ export function UsersPage() {
                   <label htmlFor="address" className="block text-sm font-medium text-gray-700">
                     Adresse
                   </label>
-                  <textarea id="address" name="address" rows={2} defaultValue={currentUser?.address || ''} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                  <textarea id="address" name="address" rows={2} defaultValue={currentUser?.address || ''} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                 </div>
                   {!currentUser && <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                           Mot de passe
                         </label>
-                        <input type="password" name="password" id="password" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                        <input type="password" name="password" id="password" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                       </div>
                       <div>
                         <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
                           Confirmer le mot de passe
                         </label>
-                        <input type="password" name="confirmPassword" id="confirmPassword" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                        <input type="password" name="confirmPassword" id="confirmPassword" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                       </div>
                     </div>}
                   {currentUser && <div>
-                      <button className="text-[#0B3B47] hover:text-[#2b5a67] text-sm flex items-center">
+                      <button className="text-[#00559b] hover:text-[#2b5a67] text-sm flex items-center">
                         <KeyIcon className="h-4 w-4 mr-1" />
                         Réinitialiser le mot de passe
                       </button>
@@ -264,7 +264,7 @@ export function UsersPage() {
                 </div>
               </div>
               <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                <button type="button" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-[#0B3B47] text-base font-medium text-white hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B3B47] sm:ml-3 sm:w-auto sm:text-sm" onClick={() => setShowModal(false)}>
+                <button type="button" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-[#00559b] text-base font-medium text-white hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00559b] sm:ml-3 sm:w-auto sm:text-sm" onClick={() => setShowModal(false)}>
                   {currentUser ? 'Mettre à jour' : 'Ajouter'}
                 </button>
                 <button type="button" className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" onClick={() => setShowModal(false)}>

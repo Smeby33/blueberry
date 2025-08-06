@@ -194,7 +194,7 @@ export const UserProfileEditForm: React.FC<UserProfileEditFormProps> = ({
                 value={formData.photoProfile}
                 onChange={handleInputChange}
                 placeholder="https://exemple.com/photo.jpg"
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
               />
               <div className="relative">
                 <input
@@ -205,7 +205,7 @@ export const UserProfileEditForm: React.FC<UserProfileEditFormProps> = ({
                   className="hidden"
                   disabled={uploading}
                 />
-                <label htmlFor="file-upload" className={`inline-block cursor-pointer bg-[#78013B] hover:bg-[#BF7076] text-white text-sm px-2 py-2 rounded-md font-medium transition-colors ${uploading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                <label htmlFor="file-upload" className={`inline-block cursor-pointer bg-[#7ff4eb] hover:bg-[#BF7076] text-white text-sm px-2 py-2 rounded-md font-medium transition-colors ${uploading ? 'opacity-50 cursor-not-allowed' : ''}`}
                   style={{ minWidth: '140px', textAlign: 'center' }}>
                   {uploading ? 'Téléchargement...' : (formData.photoProfile ? 'Changer la photo' : 'Choisir une photo')}
                 </label>
@@ -239,7 +239,7 @@ export const UserProfileEditForm: React.FC<UserProfileEditFormProps> = ({
               value={formData.name}
               onChange={handleInputChange}
               required
-              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
             />
           </div>
 
@@ -273,7 +273,7 @@ export const UserProfileEditForm: React.FC<UserProfileEditFormProps> = ({
               value={formData.phone}
               onChange={handleInputChange}
               placeholder="+33 1 23 45 67 89"
-              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
             />
           </div>
 
@@ -312,7 +312,7 @@ export const UserProfileEditForm: React.FC<UserProfileEditFormProps> = ({
               value={formData.newPassword}
               onChange={handleInputChange}
               placeholder="Laissez vide pour ne pas changer"
-              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
             />
           </div>
 
@@ -328,7 +328,7 @@ export const UserProfileEditForm: React.FC<UserProfileEditFormProps> = ({
               value={formData.confirmPassword}
               onChange={handleInputChange}
               placeholder="Confirmez le nouveau mot de passe"
-              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
             />
           </div>
         </div>
@@ -337,7 +337,7 @@ export const UserProfileEditForm: React.FC<UserProfileEditFormProps> = ({
           <button
             type="submit"
             disabled={loading}
-            className="bg-[#0B3B47] hover:bg-[#2b5a67] disabled:bg-gray-400 text-white px-4 py-2 rounded-md font-medium transition-colors"
+            className="bg-[#00559b] hover:bg-[#2b5a67] disabled:bg-gray-400 text-white px-4 py-2 rounded-md font-medium transition-colors"
           >
             {loading ? 'Enregistrement...' : 'Enregistrer les modifications'}
           </button>

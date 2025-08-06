@@ -82,7 +82,7 @@ export function Plateau({
       {/* Plateau panel */}
       <div className={`absolute top-0 right-0 w-full sm:w-96 h-full bg-white shadow-xl transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'} flex flex-col`}>
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-xl font-bold text-[#0B3B47]">
+          <h2 className="text-xl font-bold text-[#00559b]">
             Composer votre commande
           </h2>
           <button onClick={onClose} className="p-1 rounded-full hover:bg-gray-100">
@@ -107,8 +107,8 @@ export function Plateau({
         )}
         <div className="flex-grow overflow-y-auto p-4">
           {plateauItems.length === 0 ? <div className="flex flex-col items-center justify-center h-full text-gray-500">
-              <div className="bg-[#e2b7d3] p-4 rounded-full mb-4">
-                <ShoppingCartIcon className="w-12 h-12 text-[#78013B]" />
+              <div className="bg-[#e1edf7] p-4 rounded-full mb-4">
+                <ShoppingCartIcon className="w-12 h-12 text-[#7ff4eb]" />
               </div>
               <p className="text-lg mb-2 font-medium">Votre commande est vide</p>
               <p className="text-sm text-center text-gray-500 mb-6">
@@ -173,19 +173,19 @@ export function Plateau({
         <div className="border-t p-4 bg-white">
           <div className="flex justify-between font-bold text-lg mb-4">
             <span>Total</span>
-            <span className="text-[#0B3B47]">{plateauTotal.toFixed(2)} xaf</span>
+            <span className="text-[#00559b]">{plateauTotal.toFixed(2)} xaf</span>
           </div>
           <div className="flex space-x-3">
             <button onClick={onClearPlateau} className="flex-1 py-2 border border-gray-300 rounded-md font-medium hover:bg-gray-50 transition-colors" disabled={plateauItems.length === 0}>
               Vider
             </button>
-            <button onClick={handleAddToCart} className={`flex-1 flex items-center justify-center py-2 rounded-md font-medium ${isCommandeComplete ? 'bg-[#78013B] hover:bg-[#BF7076] text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'}`} disabled={!isCommandeComplete || plateauItems.length === 0}>
+            <button onClick={handleAddToCart} className={`flex-1 flex items-center justify-center py-2 rounded-md font-medium ${isCommandeComplete ? 'bg-[#7ff4eb] hover:bg-[#BF7076] text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'}`} disabled={!isCommandeComplete || plateauItems.length === 0}>
               <ShoppingCartIcon className="w-4 h-4 mr-2" />
               Ajouter au panier
             </button>
           </div>
           <div className="mt-3 text-center">
-            <button onClick={onClose} className="text-[#0B3B47] hover:underline text-sm">
+            <button onClick={onClose} className="text-[#00559b] hover:underline text-sm">
               Continuer mes achats
             </button>
           </div>

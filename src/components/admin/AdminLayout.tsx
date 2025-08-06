@@ -14,7 +14,7 @@ export function AdminLayout({
       {/* Sidebar pour mobile */}
       <div className={`fixed inset-0 z-40 md:hidden ${sidebarOpen ? 'block' : 'hidden'}`}>
         <div className="fixed inset-0 bg-gray-600 bg-opacity-75" onClick={() => setSidebarOpen(false)}></div>
-        <div className="fixed inset-y-0 left-0 flex flex-col w-64 max-w-xs bg-[#0B3B47] h-full">
+        <div className="fixed inset-y-0 left-0 flex flex-col w-64 max-w-xs bg-[#00559b] h-full">
           <div className="flex items-center justify-between h-16 px-4 bg-[#2b5a67]">
             <div className="text-xl font-bold text-white">
              BLUEBERRY Admin
@@ -53,7 +53,7 @@ export function AdminLayout({
               <div className="absolute inset-y-0 left-0 flex items-center pl-3">
                 <SearchIcon className="w-5 h-5 text-gray-400" />
               </div>
-              <input type="text" placeholder="Rechercher..." className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#0B3B47]" />
+              <input type="text" placeholder="Rechercher..." className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#00559b]" />
             </div>
           </div>
           <div className="flex items-center space-x-4">

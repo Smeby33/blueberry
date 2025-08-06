@@ -104,10 +104,10 @@ export function MenuPage({
     { id: 'boissons', name: 'Boissons' },
     { id: 'accompagnements', name: 'Accompagnements' }
   ];
-  return <div className="py-12 bg-[#e2b7d3]">
+  return <div className="py-12 bg-[#e1edf7]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-[#0B3B47]">Menu Blueberry</h1>
+          <h1 className="text-4xl font-bold text-[#00559b]">Menu Blueberry</h1>
           <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
             Bienvenue chez <strong>Blueberry</strong>, votre restaurant fast-food, glaces et crêpes situé à Port-Gentil, boulevard Champvagne.<br />
             Découvrez nos burgers, snacks, glaces artisanales et crêpes gourmandes.
@@ -117,8 +117,8 @@ export function MenuPage({
         {/* Indicateur de chargement */}
         {loading && (
           <div className="flex justify-center items-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#0B3B47]"></div>
-            <span className="ml-4 text-[#0B3B47]">Chargement du menu...</span>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#00559b]"></div>
+            <span className="ml-4 text-[#00559b]">Chargement du menu...</span>
           </div>
         )}
 
@@ -143,8 +143,8 @@ export function MenuPage({
                   }}
                   className={`px-5 py-2.5 rounded-full transition-colors ${
                     activeCategory === 'tous'
-                      ? 'bg-[#0B3B47] text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-[#78013B] hover:text-white'
+                      ? 'bg-[#00559b] text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-[#7ff4eb] hover:text-white'
                   }`}
                 >
                   Tous les produits
@@ -159,8 +159,8 @@ export function MenuPage({
                     }}
                     className={`px-5 py-2.5 rounded-full transition-colors ${
                       activeCategory === category.id
-                        ? 'bg-[#0B3B47] text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-[#78013B] hover:text-white'
+                        ? 'bg-[#00559b] text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-[#7ff4eb] hover:text-white'
                     }`}
                   >
                     {category.name}

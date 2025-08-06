@@ -40,13 +40,13 @@ export function RestaurantInfo() {
   }
 
   return (
-    <section className="py-16" style={{ background: info.backgroundColor || '#e2b7d3' }}>
+    <section className="py-16" style={{ background: info.backgroundColor || '#e1edf7' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           {info.logo && (
             <img src={info.logo} alt="Logo" className="mx-auto mb-4 h-20 rounded-full object-contain shadow" style={{ background: '#fff' }} />
           )}
-          <h2 className="text-3xl font-bold" style={{ color: info.primaryColor || '#0B3B47', fontFamily: info.fontFamily || 'inherit' }}>
+          <h2 className="text-3xl font-bold" style={{ color: info.primaryColor || '#00559b', fontFamily: info.fontFamily || 'inherit' }}>
             {info.restaurantName || 'Notre Restaurant'}
           </h2>
           <p className="text-gray-600 mt-2" style={{ fontFamily: info.fontFamily || 'inherit' }}>
@@ -56,13 +56,13 @@ export function RestaurantInfo() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <div className="bg-white p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-4" style={{ color: info.primaryColor || '#0B3B47', fontFamily: info.fontFamily || 'inherit' }}>
+              <h3 className="text-xl font-semibold mb-4" style={{ color: info.primaryColor || '#00559b', fontFamily: info.fontFamily || 'inherit' }}>
                 Informations pratiques
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="bg-[#e2b7d3] p-2 rounded-md mr-4">
-                    <MapPin className="w-5 h-5" style={{ color: info.secondaryColor || '#78013B' }} />
+                  <div className="bg-[#e1edf7] p-2 rounded-md mr-4">
+                    <MapPin className="w-5 h-5" style={{ color: info.secondaryColor || '#7ff4eb' }} />
                   </div>
                   <div>
                     <h4 className="font-medium">Adresse</h4>
@@ -72,8 +72,8 @@ export function RestaurantInfo() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-[#e2b7d3] p-2 rounded-md mr-4">
-                    <Clock className="w-5 h-5" style={{ color: info.secondaryColor || '#78013B' }} />
+                  <div className="bg-[#e1edf7] p-2 rounded-md mr-4">
+                    <Clock className="w-5 h-5" style={{ color: info.secondaryColor || '#7ff4eb' }} />
                   </div>
                   <div>
                     <h4 className="font-medium">Horaires d'ouverture</h4>
@@ -82,8 +82,8 @@ export function RestaurantInfo() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-[#e2b7d3] p-2 rounded-md mr-4">
-                    <Phone className="w-5 h-5" style={{ color: info.secondaryColor || '#78013B' }} />
+                  <div className="bg-[#e1edf7] p-2 rounded-md mr-4">
+                    <Phone className="w-5 h-5" style={{ color: info.secondaryColor || '#7ff4eb' }} />
                   </div>
                   <div>
                     <h4 className="font-medium">Contact</h4>
@@ -96,7 +96,7 @@ export function RestaurantInfo() {
                 <div className="mt-6 flex flex-wrap gap-3">
                   {info.labels.map((label, i) => (
                     <div key={i} className="flex items-center bg-white py-1 px-3 rounded-full">
-                      <Award className="w-4 h-4" style={{ color: info.secondaryColor || '#78013B' }} />
+                      <Award className="w-4 h-4" style={{ color: info.secondaryColor || '#7ff4eb' }} />
                       <span className="text-sm">{label}</span>
                     </div>
                   ))}

@@ -127,7 +127,7 @@ export function ShoppingCart({
   if (loadingOrders) {
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-30">
-        <div className="bg-white p-8 rounded shadow text-center text-[#0B3B47] font-bold">Chargement de vos commandes en attente...</div>
+        <div className="bg-white p-8 rounded shadow text-center text-[#00559b] font-bold">Chargement de vos commandes en attente...</div>
       </div>
     );
   }
@@ -138,7 +138,7 @@ export function ShoppingCart({
       {/* Cart panel */}
       <div className={`absolute top-0 right-0 w-full sm:w-96 h-full bg-white shadow-xl transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'} flex flex-col`}>
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-xl font-bold text-[#0B3B47] flex items-center">
+          <h2 className="text-xl font-bold text-[#00559b] flex items-center">
             <ShoppingBagIcon className="w-5 h-5 mr-2" />
             Votre panier
           </h2>
@@ -149,14 +149,14 @@ export function ShoppingCart({
         {/* Cart items */}
         <div className="flex-grow overflow-y-auto p-4">
           {items.length === 0 ? <div className="flex flex-col items-center justify-center h-full text-gray-500">
-              <div className="bg-[#e2b7d3] p-4 rounded-full mb-4">
-                <ShoppingBagIcon className="w-12 h-12 text-[#78013B]" />
+              <div className="bg-[#e1edf7] p-4 rounded-full mb-4">
+                <ShoppingBagIcon className="w-12 h-12 text-[#7ff4eb]" />
               </div>
               <p className="text-lg mb-2 font-medium">Votre panier est vide</p>
               <p className="text-sm text-center text-gray-500 mb-6">
                 Ajoutez des articles à votre panier pour passer commande.
               </p>
-              <button onClick={onClose} className="bg-[#0B3B47] hover:bg-[#2b5a67] text-white px-4 py-2 rounded-md font-medium transition-colors">
+              <button onClick={onClose} className="bg-[#00559b] hover:bg-[#2b5a67] text-white px-4 py-2 rounded-md font-medium transition-colors">
                 Découvrir le menu
               </button>
             </div> : <ul className="divide-y">
@@ -202,7 +202,7 @@ export function ShoppingCart({
                         <TrashIcon className="w-4 h-4 mr-1" />
                         <span className="hidden sm:inline">Supprimer</span>
                       </button>
-                      <span className="font-medium text-[#0B3B47]">
+                      <span className="font-medium text-[#00559b]">
                         {(item.price * item.quantity).toFixed(2)} xaf
                       </span>
                     </div>
@@ -223,18 +223,18 @@ export function ShoppingCart({
             </div>
             <div className="flex justify-between font-bold pt-2 border-t">
               <span>Total</span>
-              <span className="text-[#0B3B47]">{total.toFixed(2)} xaf</span>
+              <span className="text-[#00559b]">{total.toFixed(2)} xaf</span>
             </div>
           </div>
           <button 
             onClick={handleCheckout} 
-            className={`w-full py-3 rounded-md font-medium flex items-center justify-center ${items.length === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-[#78013B] hover:bg-[#BF7076] text-white'}`} 
+            className={`w-full py-3 rounded-md font-medium flex items-center justify-center ${items.length === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-[#7ff4eb] hover:bg-[#BF7076] text-white'}`} 
             disabled={items.length === 0}
           >
             Commander
             <ChevronRightIcon className="w-4 h-4 ml-1" />
           </button>
-          <button onClick={onClose} className="w-full text-center mt-3 text-[#0B3B47] hover:underline text-sm">
+          <button onClick={onClose} className="w-full text-center mt-3 text-[#00559b] hover:underline text-sm">
             Continuer mes achats
           </button>
         </div>

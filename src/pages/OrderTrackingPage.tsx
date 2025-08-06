@@ -101,16 +101,16 @@ export function OrderTrackingPage({ user }: { user?: any }) {
   const subtotal = currentOrder ? currentOrder.subtotal : 0;
   const deliveryFee = currentOrder ? currentOrder.deliveryFee : 0;
   const total = currentOrder ? currentOrder.total : subtotal + deliveryFee;
-  return <div className="py-12 bg-[#e2b7d3]">
+  return <div className="py-12 bg-[#e1edf7]">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-xl shadow-md overflow-hidden mb-6">
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
-                <h1 className="text-2xl font-bold text-[#0B3B47]">
+                <h1 className="text-2xl font-bold text-[#00559b]">
                   Suivi de commande
                 </h1>
-                <div className="bg-[#e2b7d3] px-3 py-1 rounded-full text-sm font-medium text-[#0B3B47]">
+                <div className="bg-[#e1edf7] px-3 py-1 rounded-full text-sm font-medium text-[#00559b]">
                   Commande #{currentOrder?.id || orderId}
                 </div>
               </div>
@@ -118,7 +118,7 @@ export function OrderTrackingPage({ user }: { user?: any }) {
                 <div className="relative">
                   {/* Progress bar */}
                   <div className="h-1 bg-gray-200 rounded-full">
-                    <div className="h-1 bg-[#78013B] rounded-full transition-all duration-1000" style={{
+                    <div className="h-1 bg-[#7ff4eb] rounded-full transition-all duration-1000" style={{
                     width: `${(() => {
                       // Trouver l'étape actuelle selon currentOrder.niveau
                       const niveau = currentOrder?.niveau || 'Commande reçue';
@@ -132,8 +132,8 @@ export function OrderTrackingPage({ user }: { user?: any }) {
                     {steps.map((step, i) => {
                       const niveau = currentOrder?.niveau || 'Commande reçue';
                       const idx = steps.findIndex(s => s.title.toLowerCase() === niveau.toLowerCase());
-                      return <div key={step.id} className={`flex flex-col items-center ${step.id <= idx + 1 ? 'text-[#0B3B47]' : 'text-gray-400'}`}>
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step.id < idx + 1 ? 'bg-[#78013B] text-white' : step.id === idx + 1 ? 'bg-[#0B3B47] text-white' : 'bg-gray-200'}`}>
+                      return <div key={step.id} className={`flex flex-col items-center ${step.id <= idx + 1 ? 'text-[#00559b]' : 'text-gray-400'}`}>
+                        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step.id < idx + 1 ? 'bg-[#7ff4eb] text-white' : step.id === idx + 1 ? 'bg-[#00559b] text-white' : 'bg-gray-200'}`}>
                           <step.icon className="w-4 h-4" />
                         </div>
                         <div className="text-xs mt-2 font-medium text-center">
@@ -144,13 +144,13 @@ export function OrderTrackingPage({ user }: { user?: any }) {
                   </div>
                 </div>
               </div>
-              <div className="bg-[#e2b7d3] p-4 rounded-lg flex items-center mb-6">
+              <div className="bg-[#e1edf7] p-4 rounded-lg flex items-center mb-6">
                 <div className="bg-white p-2 rounded-full mr-4">
-                  <ClockIcon className="w-6 h-6 text-[#78013B]" />
+                  <ClockIcon className="w-6 h-6 text-[#7ff4eb]" />
                 </div>
                 <div>
                   <div className="text-sm text-gray-600">Temps estimé</div>
-                  <div className="font-bold text-[#0B3B47]">
+                  <div className="font-bold text-[#00559b]">
                     {currentOrder?.estimatedDeliveryTime || 'N/A'}
                   </div>
                 </div>
@@ -188,14 +188,14 @@ export function OrderTrackingPage({ user }: { user?: any }) {
                   </div>
                   <div className="flex justify-between font-bold text-lg border-t pt-2 mt-2">
                     <span>Total</span>
-                    <span className="text-[#0B3B47]">{total ? total.toFixed(2) : '0.00'} xaf</span>
+                    <span className="text-[#00559b]">{total ? total.toFixed(2) : '0.00'} xaf</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="text-center">
-            <Link to="/menu" className="bg-[#0B3B47] hover:bg-[#2b5a67] text-white px-6 py-3 rounded-md font-medium inline-block transition-colors">
+            <Link to="/menu" className="bg-[#00559b] hover:bg-[#2b5a67] text-white px-6 py-3 rounded-md font-medium inline-block transition-colors">
               Retour au menu
             </Link>
           </div>

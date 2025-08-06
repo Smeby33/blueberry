@@ -165,7 +165,7 @@ export function DashboardPage() {
                         <tbody className="bg-white divide-y divide-gray-200">
                           {recentOrders.map(order => (
                             <tr key={order.id} className="hover:bg-gray-50">
-                              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-[#0B3B47]">#{order.id}</td>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-[#00559b]">#{order.id}</td>
                               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{order.customer}</td>
                               <td className="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">{order.items.join(', ')}</td>
                               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{order.total}</td>
@@ -179,7 +179,7 @@ export function DashboardPage() {
                       </table>
                     </div>
                     <div className="mt-4 text-center">
-                      <Link to="/admin/orders" className="text-[#0B3B47] hover:text-[#2b5a67] font-medium">Voir toutes les commandes</Link>
+                      <Link to="/admin/orders" className="text-[#00559b] hover:text-[#2b5a67] font-medium">Voir toutes les commandes</Link>
                     </div>
                   </div>
                 </div>
@@ -198,14 +198,14 @@ export function DashboardPage() {
                               <span className="text-sm text-gray-500">{item.count} vendus</span>
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-2">
-                              <div className="bg-[#78013B] h-2 rounded-full" style={{ width: `${item.percentage}%` }}></div>
+                              <div className="bg-[#7ff4eb] h-2 rounded-full" style={{ width: `${item.percentage}%` }}></div>
                             </div>
                           </div>
                         </li>
                       ))}
                     </ul>
                     <div className="mt-6 text-center">
-                      <Link to="/admin/products" className="text-[#0B3B47] hover:text-[#2b5a67] font-medium">Voir tous les produits</Link>
+                      <Link to="/admin/products" className="text-[#00559b] hover:text-[#2b5a67] font-medium">Voir tous les produits</Link>
                     </div>
                   </div>
                 </div>

@@ -88,7 +88,7 @@ const NotificationsPage: React.FC = () => {
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-6 text-[#0B3B47]">Notifications</h2>
+      <h2 className="text-2xl font-bold mb-6 text-[#00559b]">Notifications</h2>
       {notifications.length === 0 ? (
         <>
           <div className="text-gray-500">Aucune notification.</div>
@@ -110,7 +110,7 @@ const NotificationsPage: React.FC = () => {
               price = firstItem.price;
             }
             return (
-              <li key={notif.id} className={`p-4 rounded-lg shadow bg-white border-l-4 ${notif.read ? 'border-gray-200' : 'border-[#78013B]'}`}>
+              <li key={notif.id} className={`p-4 rounded-lg shadow bg-white border-l-4 ${notif.read ? 'border-gray-200' : 'border-[#7ff4eb]'}`}>
                 <div className="flex items-center">
                   {image && (
                     <img src={image} alt={firstItem?.name} className="w-16 h-16 object-cover rounded mr-4 border" />
@@ -119,12 +119,12 @@ const NotificationsPage: React.FC = () => {
                     <div className="font-semibold text-lg">{firstItem?.name || notif.title}</div>
                     <div className="text-gray-600 mt-1">{notif.message}</div>
                     {price && (
-                      <div className="text-xs text-[#0B3B47] mt-1">Prix : <span className="font-mono">{price} xaf</span></div>
+                      <div className="text-xs text-[#00559b] mt-1">Prix : <span className="font-mono">{price} xaf</span></div>
                     )}
                     <div className="text-xs text-gray-400 mt-2">{dateStr}</div>
                   </div>
                   {!notif.read && (
-                    <button className="ml-4 px-3 py-1 bg-transparent text-[#78013B] rounded hover:bg-[#e2b7d3]" onClick={() => handleMarkAsRead(notif.id)} title="Marquer comme lue">
+                    <button className="ml-4 px-3 py-1 bg-transparent text-[#7ff4eb] rounded hover:bg-[#e1edf7]" onClick={() => handleMarkAsRead(notif.id)} title="Marquer comme lue">
                       <span className="text-2xl">✓</span>
                     </button>
                   )}

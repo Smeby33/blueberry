@@ -228,7 +228,7 @@ export const UserAddressEditForm: React.FC<UserAddressEditFormProps> = ({
               onBlur={() => setTimeout(() => setShowSuggestions(false), 150)}
               placeholder="Domicile, Bureau, etc."
               required
-              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
             />
             {showSuggestions && (
               <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg">
@@ -260,7 +260,7 @@ export const UserAddressEditForm: React.FC<UserAddressEditFormProps> = ({
               value={formData.postalCode}
               onChange={handleInputChange}
               placeholder="75001"
-              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
             />
           </div>
 
@@ -276,7 +276,7 @@ export const UserAddressEditForm: React.FC<UserAddressEditFormProps> = ({
               onChange={handleInputChange}
               placeholder="123 Rue de la République"
               required
-              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
             />
           </div>
 
@@ -292,7 +292,7 @@ export const UserAddressEditForm: React.FC<UserAddressEditFormProps> = ({
               onChange={handleInputChange}
               placeholder="Paris"
               required
-              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
             />
           </div>
 
@@ -332,7 +332,7 @@ export const UserAddressEditForm: React.FC<UserAddressEditFormProps> = ({
                     ...prev,
                     latitude: e.target.value ? parseFloat(e.target.value) : undefined
                   }))}
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
                 />
               </div>
               <div>
@@ -345,7 +345,7 @@ export const UserAddressEditForm: React.FC<UserAddressEditFormProps> = ({
                     ...prev,
                     longitude: e.target.value ? parseFloat(e.target.value) : undefined
                   }))}
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#0B3B47] focus:border-[#0B3B47] sm:text-sm"
+                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#00559b] focus:border-[#00559b] sm:text-sm"
                 />
               </div>
             </div> */}
@@ -363,7 +363,7 @@ export const UserAddressEditForm: React.FC<UserAddressEditFormProps> = ({
               name="isDefault"
               checked={formData.isDefault}
               onChange={handleInputChange}
-              className="h-4 w-4 text-[#0B3B47] focus:ring-[#0B3B47] border-gray-300 rounded"
+              className="h-4 w-4 text-[#00559b] focus:ring-[#00559b] border-gray-300 rounded"
             />
             <label htmlFor="edit-isDefault" className="ml-2 block text-sm text-gray-700">
               Définir comme adresse par défaut
@@ -375,7 +375,7 @@ export const UserAddressEditForm: React.FC<UserAddressEditFormProps> = ({
           <button
             type="submit"
             disabled={loading}
-            className="bg-[#0B3B47] hover:bg-[#2b5a67] disabled:bg-gray-400 text-white px-4 py-2 rounded-md font-medium transition-colors flex items-center"
+            className="bg-[#00559b] hover:bg-[#2b5a67] disabled:bg-gray-400 text-white px-4 py-2 rounded-md font-medium transition-colors flex items-center"
           >
             {loading ? (
               <>

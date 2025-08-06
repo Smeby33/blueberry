@@ -28,9 +28,9 @@ export function SettingsPage() {
   const [appearance, setAppearance] = useState<Appearance>({
     logo: '',
     favicon: '',
-    primaryColor: '#0B3B47',
-    secondaryColor: '#78013B',
-    backgroundColor: '#e2b7d3',
+    primaryColor: '#00559b',
+    secondaryColor: '#7ff4eb',
+    backgroundColor: '#e1edf7',
     fontFamily: 'Inter',
   });
   const [appearanceLoading, setAppearanceLoading] = useState(false);
@@ -151,7 +151,7 @@ export function SettingsPage() {
           <nav className="-mb-px flex space-x-6 overflow-x-auto">
             {tabs.map(tab => <button key={tab.id} className={`
                   whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm
-                  ${activeTab === tab.id ? 'border-[#0B3B47] text-[#0B3B47]' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}
+                  ${activeTab === tab.id ? 'border-[#00559b] text-[#00559b]' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}
                 `} onClick={() => setActiveTab(tab.id)}>
                 {tab.name}
               </button>)}
@@ -171,13 +171,13 @@ export function SettingsPage() {
                       <label htmlFor="restaurantName" className="block text-sm font-medium text-gray-700">
                         Nom de l'entreprise
                       </label>
-                      <input type="text" name="restaurantName" id="restaurantName" value={form.restaurantName} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                      <input type="text" name="restaurantName" id="restaurantName" value={form.restaurantName} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                         Email de contact
                       </label>
-                      <input type="email" name="email" id="email" value={form.email} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                      <input type="email" name="email" id="email" value={form.email} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                     </div>
                   </div>
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -185,31 +185,31 @@ export function SettingsPage() {
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                         Téléphone
                       </label>
-                      <input type="tel" name="phone" id="phone" value={form.phone} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                      <input type="tel" name="phone" id="phone" value={form.phone} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                     </div>
                     <div>
                       <label htmlFor="website" className="block text-sm font-medium text-gray-700">
                         Site web
                       </label>
-                      <input type="text" name="website" id="website" value={form.website} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                      <input type="text" name="website" id="website" value={form.website} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                     </div>
                   </div>
                   <div>
                     <label htmlFor="address" className="block text-sm font-medium text-gray-700">
                       Adresse
                     </label>
-                    <textarea id="address" name="address" rows={3} value={form.address} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                    <textarea id="address" name="address" rows={3} value={form.address} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                   </div>
                   <div>
                     <label htmlFor="description" className="block text-sm font-medium text-gray-700">
                       Description
                     </label>
-                    <textarea id="description" name="description" rows={4} value={form.description} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                    <textarea id="description" name="description" rows={4} value={form.description} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                   </div>
                 </div>
                 {success && <div className="text-green-600 mt-4">Modifications enregistrées !</div>}
                 <div className="bg-gray-50 px-6 py-3 flex justify-end mt-6">
-                  <button type="submit" disabled={loading} className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#0B3B47] hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B3B47] disabled:opacity-60">
+                  <button type="submit" disabled={loading} className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#00559b] hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00559b] disabled:opacity-60">
                     <SaveIcon className="h-4 w-4 mr-2" />
                     {loading ? 'Enregistrement...' : 'Enregistrer'}
                   </button>
@@ -235,7 +235,7 @@ export function SettingsPage() {
                           <span className="text-gray-500">Logo</span>
                         </div>
                       )}
-                      <label className="ml-2 inline-flex items-center px-3 py-2 bg-[#0B3B47] hover:bg-[#28505e] text-white text-sm font-medium rounded-md cursor-pointer shadow-sm transition-colors" htmlFor="logo-upload">
+                      <label className="ml-2 inline-flex items-center px-3 py-2 bg-[#00559b] hover:bg-[#28505e] text-white text-sm font-medium rounded-md cursor-pointer shadow-sm transition-colors" htmlFor="logo-upload">
                         <UploadCloud className="h-4 w-4 mr-2" /> Choisir un fichier
                         <input id="logo-upload" type="file" accept="image/*" className="hidden" onChange={e => handleAppearanceImageChange(e, 'logo')} />
                       </label>
@@ -251,7 +251,7 @@ export function SettingsPage() {
                           <span className="text-gray-500 text-xs">Fav</span>
                         </div>
                       )}
-                      <label className="ml-2 inline-flex items-center px-3 py-2 bg-[#0B3B47] hover:bg-[#28505e] text-white text-sm font-medium rounded-md cursor-pointer shadow-sm transition-colors" htmlFor="favicon-upload">
+                      <label className="ml-2 inline-flex items-center px-3 py-2 bg-[#00559b] hover:bg-[#28505e] text-white text-sm font-medium rounded-md cursor-pointer shadow-sm transition-colors" htmlFor="favicon-upload">
                         <UploadCloud className="h-4 w-4 mr-2" /> Choisir un fichier
                         <input id="favicon-upload" type="file" accept="image/*" className="hidden" onChange={e => handleAppearanceImageChange(e, 'favicon')} />
                       </label>
@@ -262,27 +262,27 @@ export function SettingsPage() {
                       <label htmlFor="primaryColor" className="block text-sm font-medium text-gray-700">Couleur principale</label>
                       <div className="mt-1 flex rounded-md shadow-sm">
                         <input type="color" name="primaryColor" id="primaryColor" value={appearance.primaryColor} onChange={handleAppearanceChange} className="h-10 w-10 border border-gray-300 rounded-md" />
-                        <input type="text" name="primaryColor" value={appearance.primaryColor} onChange={handleAppearanceChange} className="ml-2 flex-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                        <input type="text" name="primaryColor" value={appearance.primaryColor} onChange={handleAppearanceChange} className="ml-2 flex-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                       </div>
                     </div>
                     <div>
                       <label htmlFor="secondaryColor" className="block text-sm font-medium text-gray-700">Couleur secondaire</label>
                       <div className="mt-1 flex rounded-md shadow-sm">
                         <input type="color" name="secondaryColor" id="secondaryColor" value={appearance.secondaryColor} onChange={handleAppearanceChange} className="h-10 w-10 border border-gray-300 rounded-md" />
-                        <input type="text" name="secondaryColor" value={appearance.secondaryColor} onChange={handleAppearanceChange} className="ml-2 flex-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                        <input type="text" name="secondaryColor" value={appearance.secondaryColor} onChange={handleAppearanceChange} className="ml-2 flex-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                       </div>
                     </div>
                     <div>
                       <label htmlFor="backgroundColor" className="block text-sm font-medium text-gray-700">Couleur de fond</label>
                       <div className="mt-1 flex rounded-md shadow-sm">
                         <input type="color" name="backgroundColor" id="backgroundColor" value={appearance.backgroundColor} onChange={handleAppearanceChange} className="h-10 w-10 border border-gray-300 rounded-md" />
-                        <input type="text" name="backgroundColor" value={appearance.backgroundColor} onChange={handleAppearanceChange} className="ml-2 flex-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]" />
+                        <input type="text" name="backgroundColor" value={appearance.backgroundColor} onChange={handleAppearanceChange} className="ml-2 flex-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]" />
                       </div>
                     </div>
                   </div>
                   <div>
                     <label htmlFor="fontFamily" className="block text-sm font-medium text-gray-700">Police de caractères</label>
-                    <select id="fontFamily" name="fontFamily" value={appearance.fontFamily} onChange={handleAppearanceChange} className="mt-1 block w-full pl-3 pr-10 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-[#0B3B47] focus:border-[#0B3B47]">
+                    <select id="fontFamily" name="fontFamily" value={appearance.fontFamily} onChange={handleAppearanceChange} className="mt-1 block w-full pl-3 pr-10 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-[#00559b] focus:border-[#00559b]">
                       <option>Inter</option>
                       <option>Roboto</option>
                       <option>Open Sans</option>
@@ -293,7 +293,7 @@ export function SettingsPage() {
                 </div>
                 {appearanceSuccess && <div className="text-green-600 mt-4">Apparence enregistrée !</div>}
                 <div className="bg-gray-50 px-6 py-3 flex justify-end mt-6">
-                  <button type="submit" disabled={appearanceLoading} className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#0B3B47] hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B3B47] disabled:opacity-60">
+                  <button type="submit" disabled={appearanceLoading} className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#00559b] hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00559b] disabled:opacity-60">
                     <SaveIcon className="h-4 w-4 mr-2" />
                     {appearanceLoading ? 'Enregistrement...' : 'Enregistrer'}
                   </button>
@@ -315,7 +315,7 @@ export function SettingsPage() {
                     <div className="mt-4 space-y-4">
                       <div className="flex items-start">
                         <div className="flex items-center h-5">
-                          <input id="newOrder" name="newOrder" type="checkbox" defaultChecked className="focus:ring-[#0B3B47] h-4 w-4 text-[#0B3B47] border-gray-300 rounded" />
+                          <input id="newOrder" name="newOrder" type="checkbox" defaultChecked className="focus:ring-[#00559b] h-4 w-4 text-[#00559b] border-gray-300 rounded" />
                         </div>
                         <div className="ml-3 text-sm">
                           <label htmlFor="newOrder" className="font-medium text-gray-700">
@@ -328,7 +328,7 @@ export function SettingsPage() {
                       </div>
                       <div className="flex items-start">
                         <div className="flex items-center h-5">
-                          <input id="orderStatus" name="orderStatus" type="checkbox" defaultChecked className="focus:ring-[#0B3B47] h-4 w-4 text-[#0B3B47] border-gray-300 rounded" />
+                          <input id="orderStatus" name="orderStatus" type="checkbox" defaultChecked className="focus:ring-[#00559b] h-4 w-4 text-[#00559b] border-gray-300 rounded" />
                         </div>
                         <div className="ml-3 text-sm">
                           <label htmlFor="orderStatus" className="font-medium text-gray-700">
@@ -342,7 +342,7 @@ export function SettingsPage() {
                       </div>
                       <div className="flex items-start">
                         <div className="flex items-center h-5">
-                          <input id="lowStock" name="lowStock" type="checkbox" defaultChecked className="focus:ring-[#0B3B47] h-4 w-4 text-[#0B3B47] border-gray-300 rounded" />
+                          <input id="lowStock" name="lowStock" type="checkbox" defaultChecked className="focus:ring-[#00559b] h-4 w-4 text-[#00559b] border-gray-300 rounded" />
                         </div>
                         <div className="ml-3 text-sm">
                           <label htmlFor="lowStock" className="font-medium text-gray-700">
@@ -356,7 +356,7 @@ export function SettingsPage() {
                       </div>
                       <div className="flex items-start">
                         <div className="flex items-center h-5">
-                          <input id="dailyReport" name="dailyReport" type="checkbox" className="focus:ring-[#0B3B47] h-4 w-4 text-[#0B3B47] border-gray-300 rounded" />
+                          <input id="dailyReport" name="dailyReport" type="checkbox" className="focus:ring-[#00559b] h-4 w-4 text-[#00559b] border-gray-300 rounded" />
                         </div>
                         <div className="ml-3 text-sm">
                           <label htmlFor="dailyReport" className="font-medium text-gray-700">
@@ -377,7 +377,7 @@ export function SettingsPage() {
                     <div className="mt-4 space-y-4">
                       <div className="flex items-start">
                         <div className="flex items-center h-5">
-                          <input id="orderConfirmation" name="orderConfirmation" type="checkbox" defaultChecked className="focus:ring-[#0B3B47] h-4 w-4 text-[#0B3B47] border-gray-300 rounded" />
+                          <input id="orderConfirmation" name="orderConfirmation" type="checkbox" defaultChecked className="focus:ring-[#00559b] h-4 w-4 text-[#00559b] border-gray-300 rounded" />
                         </div>
                         <div className="ml-3 text-sm">
                           <label htmlFor="orderConfirmation" className="font-medium text-gray-700">
@@ -391,7 +391,7 @@ export function SettingsPage() {
                       </div>
                       <div className="flex items-start">
                         <div className="flex items-center h-5">
-                          <input id="orderStatusUpdate" name="orderStatusUpdate" type="checkbox" defaultChecked className="focus:ring-[#0B3B47] h-4 w-4 text-[#0B3B47] border-gray-300 rounded" />
+                          <input id="orderStatusUpdate" name="orderStatusUpdate" type="checkbox" defaultChecked className="focus:ring-[#00559b] h-4 w-4 text-[#00559b] border-gray-300 rounded" />
                         </div>
                         <div className="ml-3 text-sm">
                           <label htmlFor="orderStatusUpdate" className="font-medium text-gray-700">
@@ -405,7 +405,7 @@ export function SettingsPage() {
                       </div>
                       <div className="flex items-start">
                         <div className="flex items-center h-5">
-                          <input id="marketing" name="marketing" type="checkbox" className="focus:ring-[#0B3B47] h-4 w-4 text-[#0B3B47] border-gray-300 rounded" />
+                          <input id="marketing" name="marketing" type="checkbox" className="focus:ring-[#00559b] h-4 w-4 text-[#00559b] border-gray-300 rounded" />
                         </div>
                         <div className="ml-3 text-sm">
                           <label htmlFor="marketing" className="font-medium text-gray-700">
@@ -422,7 +422,7 @@ export function SettingsPage() {
                 </div>
               </div>
               <div className="bg-gray-50 px-6 py-3 flex justify-end">
-                <button type="button" className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#0B3B47] hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B3B47]">
+                <button type="button" className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#00559b] hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00559b]">
                   <SaveIcon className="h-4 w-4 mr-2" />
                   Enregistrer
                 </button>

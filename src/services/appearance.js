@@ -11,9 +11,9 @@ export async function getAppearanceInfo() {
   return {
     logo: data.logo || '',
     favicon: data.favicon || '',
-    primaryColor: data.primaryColor || '#0B3B47',
-    secondaryColor: data.secondaryColor || '#78013B',
-    backgroundColor: data.backgroundColor || '#e2b7d3',
+    primaryColor: data.primaryColor || '#00559b',
+    secondaryColor: data.secondaryColor || '#7ff4eb',
+    backgroundColor: data.backgroundColor || '#e1edf7',
     fontFamily: data.fontFamily || 'Inter',
   };
 }

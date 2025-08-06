@@ -51,10 +51,10 @@ export function DailySpecial({ onAddToPlateau }: { onAddToPlateau: (product: Spe
   }
 
   return (
-    <section className="py-16 bg-[#e2b7d3]">
+    <section className="py-16 bg-[#e1edf7]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-[#0B3B47]">{special.name}</h2>
+          <h2 className="text-3xl font-bold text-[#00559b]">{special.name}</h2>
           {special.description && (
             <p className="text-gray-600 mt-2">{special.description}</p>
           )}
@@ -65,7 +65,7 @@ export function DailySpecial({ onAddToPlateau }: { onAddToPlateau: (product: Spe
               <div className="relative h-72 md:h-full">
                 <img src={special.image} alt={special.name} className="w-full h-full object-cover" />
                 {special.category && (
-                  <div className="absolute top-4 left-4 bg-[#78013B] text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute top-4 left-4 bg-[#7ff4eb] text-white px-3 py-1 rounded-full text-sm font-medium">
                     {special.category}
                   </div>
                 )}
@@ -107,11 +107,11 @@ export function DailySpecial({ onAddToPlateau }: { onAddToPlateau: (product: Spe
               )}
               <div className="mt-6 flex justify-between items-center">
                 {special.price && (
-                  <span className="text-2xl font-bold text-[#0B3B47]">
+                  <span className="text-2xl font-bold text-[#00559b]">
                     {special.price.toFixed(2)} xaf
                   </span>
                 )}
-                <button className="flex items-center bg-[#78013B] hover:bg-[#BF7076] text-white px-4 py-2 rounded-md font-medium transition-colors" onClick={() => onAddToPlateau(special)}>
+                <button className="flex items-center bg-[#7ff4eb] hover:bg-[#BF7076] text-white px-4 py-2 rounded-md font-medium transition-colors" onClick={() => onAddToPlateau(special)}>
                   <PlusCircleIcon className="w-5 h-5 mr-2" />
                   Ajouter au menu
                 </button>

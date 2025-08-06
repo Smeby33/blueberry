@@ -654,9 +654,9 @@ export const getSettings = async () => {
       description: "Blueberry est votre restaurant de fast-food de référence à Port-Gentil, spécialisé dans les burgers, pizzas, glaces artisanales et crêpes gourmandes.",
       website: "https://www.blueberry-pg.com",
       colors: {
-        primary: "#0B3B47",
-        secondary: "#78013B",
-        background: "#e2b7d3"
+        primary: "#00559b",
+        secondary: "#7ff4eb",
+        background: "#e1edf7"
       },
       fontFamily: "Inter",
       createdAt: serverTimestamp()

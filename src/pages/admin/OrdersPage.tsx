@@ -92,17 +92,17 @@ export function OrdersPage() {
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <SearchIcon className="h-5 w-5 text-gray-400" />
               </div>
-              <input type="text" placeholder="Rechercher une commande..." className="block w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#0B3B47] focus:border-[#0B3B47]" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+              <input type="text" placeholder="Rechercher une commande..." className="block w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#00559b] focus:border-[#00559b]" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
             </div>
             <div className="flex space-x-2">
-              <select className="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#0B3B47] focus:border-[#0B3B47]" value={statusFilter} onChange={e => setStatusFilter(e.target.value)}>
+              <select className="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#00559b] focus:border-[#00559b]" value={statusFilter} onChange={e => setStatusFilter(e.target.value)}>
                 <option value="all">Tous les statuts</option>
                 <option value="En attente">En attente</option>
                 <option value="En préparation">En préparation</option>
                 <option value="Livré">Livré</option>
                 <option value="Annulé">Annulé</option>
               </select>
-              <select className="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#0B3B47] focus:border-[#0B3B47]" value={dateFilter} onChange={e => setDateFilter(e.target.value)}>
+              <select className="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#00559b] focus:border-[#00559b]" value={dateFilter} onChange={e => setDateFilter(e.target.value)}>
                 <option value="today">Aujourd'hui</option>
                 <option value="week">Cette semaine</option>
                 <option value="month">Ce mois</option>
@@ -146,7 +146,7 @@ export function OrdersPage() {
                           <div className="min-w-0">
                             <div className="flex flex-col">
                               <div className="flex items-center">
-                                <p className="text-sm font-medium text-[#0B3B47] truncate">
+                                <p className="text-sm font-medium text-[#00559b] truncate">
                                   Commande #{order.id}
                                 </p>
                                 {/* Badge remplacé par icône si confirmé */}
@@ -249,11 +249,11 @@ export function OrdersPage() {
                           </div>
                           <div className="mt-4 pt-4 border-t border-gray-100 flex justify-between">
                             <div className="space-x-2">
-                              <button className="inline-flex items-center px-3 py-1 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#0B3B47] hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B3B47]">
+                              <button className="inline-flex items-center px-3 py-1 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#00559b] hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00559b]">
                                 <EyeIcon className="h-4 w-4 mr-1" />
                                 Détails
                               </button>
-                              <button className="inline-flex items-center px-3 py-1 border border-gray-300 text-sm font-medium rounded-md bg-white text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B3B47]">
+                              <button className="inline-flex items-center px-3 py-1 border border-gray-300 text-sm font-medium rounded-md bg-white text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00559b]">
                                 <TruckIcon className="h-4 w-4 mr-1" />
                                 Modifier le statut
                               </button>

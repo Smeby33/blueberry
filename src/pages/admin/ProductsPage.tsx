@@ -158,12 +158,12 @@ export function ProductsPage() {
           )}
           {loading && (
             <div className="ml-3 flex items-center">
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-[#0B3B47]"></div>
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-[#00559b]"></div>
               <span className="ml-2 text-sm text-gray-500">Chargement...</span>
             </div>
           )}
         </div>
-        <button onClick={handleAddNewProduct} disabled={loading} className="mt-4 md:mt-0 inline-flex items-center px-4 py-2 bg-[#0B3B47] text-white font-medium rounded-md hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B3B47] disabled:opacity-50 disabled:cursor-not-allowed">
+        <button onClick={handleAddNewProduct} disabled={loading} className="mt-4 md:mt-0 inline-flex items-center px-4 py-2 bg-[#00559b] text-white font-medium rounded-md hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00559b] disabled:opacity-50 disabled:cursor-not-allowed">
           <PlusIcon className="w-5 h-5 mr-2" />
           Ajouter un produit
         </button>
@@ -175,7 +175,7 @@ export function ProductsPage() {
           <div className="flex items-center flex-wrap gap-2">
             <span className="text-sm text-gray-500">Filtres actifs:</span>
             {activeCategory !== 'all' && (
-              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#0B3B47] text-white">
+              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#00559b] text-white">
                 Catégorie: {getCategoryName(activeCategory)}
                 <button
                   onClick={() => handleCategoryChange('all')}
@@ -212,11 +212,11 @@ export function ProductsPage() {
           <div className="flex overflow-x-auto space-x-2 py-2 md:py-0">
           {loadingCategories ? (
             <div className="flex items-center space-x-2">
-              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-[#0B3B47]"></div>
+              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-[#00559b]"></div>
               <span className="text-sm text-gray-500">Chargement des catégories...</span>
             </div>
           ) : (
-            categories.map(category => <button key={category.id} onClick={() => setActiveCategory(category.id)} className={`px-3 py-1 rounded-full whitespace-nowrap transition-colors duration-200 ${activeCategory === category.id ? 'bg-[#0B3B47] text-white shadow-md' : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'}`}>
+            categories.map(category => <button key={category.id} onClick={() => setActiveCategory(category.id)} className={`px-3 py-1 rounded-full whitespace-nowrap transition-colors duration-200 ${activeCategory === category.id ? 'bg-[#00559b] text-white shadow-md' : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'}`}>
                 {category.name}
                 {/* Afficher le nombre de produits par catégorie si chargé */}
                 {!loading && activeCategory === category.id && allProducts.length > 0 && (
@@ -231,7 +231,7 @@ export function ProductsPage() {
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <SearchIcon className="h-5 w-5 text-gray-400" />
           </div>
-          <input type="text" placeholder="Rechercher un produit..." className="block w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#0B3B47] focus:border-[#0B3B47]" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+          <input type="text" placeholder="Rechercher un produit..." className="block w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#00559b] focus:border-[#00559b]" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
           {/* Bouton pour réinitialiser la recherche */}
           {searchTerm && (
             <button
@@ -275,7 +275,7 @@ export function ProductsPage() {
                 <tr>
                   <td colSpan={6} className="px-6 py-8 text-center">
                     <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-[#0B3B47] mr-3"></div>
+                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-[#00559b] mr-3"></div>
                       <span className="text-gray-500">Chargement des produits...</span>
                     </div>
                   </td>
@@ -292,7 +292,7 @@ export function ProductsPage() {
                     {!searchTerm && activeCategory === 'all' && (
                       <button
                         onClick={handleAddNewProduct}
-                        className="mt-3 inline-flex items-center px-4 py-2 bg-[#0B3B47] text-white text-sm rounded-md hover:bg-[#2b5a67]"
+                        className="mt-3 inline-flex items-center px-4 py-2 bg-[#00559b] text-white text-sm rounded-md hover:bg-[#2b5a67]"
                       >
                         <PlusIcon className="w-4 h-4 mr-2" />
                         Ajouter le premier produit
@@ -338,7 +338,7 @@ export function ProductsPage() {
                     {product.isSpecial ? <CheckIcon className="h-5 w-5 text-green-500" /> : <XIcon className="h-5 w-5 text-gray-300" />}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <button onClick={() => handleEditProduct(product)} className="text-[#0B3B47] hover:text-[#2b5a67] mr-3">
+                    <button onClick={() => handleEditProduct(product)} className="text-[#00559b] hover:text-[#2b5a67] mr-3">
                       <EditIcon className="h-5 w-5" />
                     </button>
                     <button onClick={() => handleDeleteProduct(product)} className="text-red-600 hover:text-red-800">

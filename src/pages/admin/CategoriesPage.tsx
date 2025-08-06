@@ -69,7 +69,7 @@ export function CategoriesPage() {
     return (
       <div className="px-4 md:px-8">
         <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#0B3B47]"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#00559b]"></div>
         </div>
       </div>
     );
@@ -82,7 +82,7 @@ export function CategoriesPage() {
         </h1>
         <button 
           onClick={handleAddCategory}
-          className="mt-4 md:mt-0 inline-flex items-center px-4 py-2 bg-[#0B3B47] text-white font-medium rounded-md hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B3B47]"
+          className="mt-4 md:mt-0 inline-flex items-center px-4 py-2 bg-[#00559b] text-white font-medium rounded-md hover:bg-[#2b5a67] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00559b]"
         >
           <PlusIcon className="w-5 h-5 mr-2" />
           Ajouter une catégorie
@@ -130,7 +130,7 @@ export function CategoriesPage() {
                       <div className="flex space-x-2">
                         <button 
                           onClick={() => handleEditCategory(category)}
-                          className="text-[#0B3B47] hover:text-[#2b5a67] p-1"
+                          className="text-[#00559b] hover:text-[#2b5a67] p-1"
                         >
                           <EditIcon className="h-5 w-5" />
                         </button>

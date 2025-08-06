@@ -279,7 +279,7 @@ export function App() {
   return (
     <AuthProvider>
       <Router>
-        <div className="flex flex-col min-h-screen bg-[#e2b7d3]">
+        <div className="flex flex-col min-h-screen bg-[#e1edf7]">
           <Routes>
             {/* Routes d'administration - accessible uniquement aux admins */}
             {userProfile?.role === 'admin' && (
@@ -318,7 +318,7 @@ export function App() {
                       {/* Route d'accès refusé pour l'admin si pas les droits */}
                       {userProfile?.role !== 'admin' && (
                         <Route path="/admin/*" element={
-                          <div className="py-12 bg-[#e2b7d3]">
+                          <div className="py-12 bg-[#e1edf7]">
                             <div className="container mx-auto px-4">
                               <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-md text-center">
                                 <h1 className="text-2xl font-bold text-red-600 mb-4">Accès refusé</h1>
@@ -327,7 +327,7 @@ export function App() {
                                 </p>
                                 <button 
                                   onClick={() => window.history.back()}
-                                  className="bg-[#0B3B47] hover:bg-[#2b5a67] text-white px-6 py-2 rounded-md"
+                                  className="bg-[#00559b] hover:bg-[#2b5a67] text-white px-6 py-2 rounded-md"
                                 >
                                   Retour
                                 </button>
