@@ -44,19 +44,19 @@ export function Plateau({
   };
   // Catégories pour organiser la commande
   const categories = {
-    electricite: 'Électricité',
-    epi: 'EPI (Équipements de Protection)',
-    maintenance: 'Maintenance Industrielle',
-    outillage: 'Outillage & Équipements',
-    instrumentation: 'Instrumentation',
+    fastfood: 'Fast-food',
+    glaces: 'Glaces',
+    crepes: 'Crêpes',
+    boissons: 'Boissons',
+    accompagnements: 'Accompagnements',
     autres: 'Autres produits'
   };
   // Vérifier si la commande contient les produits nécessaires
-  const hasElectricite = plateauItems.some(item => item.category === 'electricite');
-  const hasEpi = plateauItems.some(item => item.category === 'epi');
-  const hasMaintenance = plateauItems.some(item => item.category === 'maintenance');
-  const hasOutillage = plateauItems.some(item => item.category === 'outillage');
-  const hasInstrumentation = plateauItems.some(item => item.category === 'instrumentation');
+  const hasFastfood = plateauItems.some(item => item.category === 'fastfood');
+  const hasGlaces = plateauItems.some(item => item.category === 'glaces');
+  const hasCrepes = plateauItems.some(item => item.category === 'crepes');
+  const hasBoissons = plateauItems.some(item => item.category === 'boissons');
+  const hasAccompagnements = plateauItems.some(item => item.category === 'accompagnements');
   const hasAutres = plateauItems.some(item => item.category === 'autres');
   
   // Au minimum un produit est requis pour valider la commande
